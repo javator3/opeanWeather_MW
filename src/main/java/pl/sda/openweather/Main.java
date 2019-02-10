@@ -8,7 +8,7 @@ public class Main {
                 "http://api.apixu.com/v1/current.json",
                 "13b4146ab016460c9e992445191002");
 
-        weatherService.getCityWeather("Sydney");
+        weatherService.getCityWeather("gold-coast");
 
     }
 }

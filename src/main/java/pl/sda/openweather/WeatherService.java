@@ -6,6 +6,9 @@ import pl.sda.openweather.model.Weather;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class WeatherService {
     private String finalURL;
@@ -36,7 +39,8 @@ public class WeatherService {
             jsonURL = new URL(finalURL);
             ObjectMapper objectMapper = new ObjectMapper();
             Weather weather = objectMapper.readValue(jsonURL, Weather.class);
-            System.out.println(weather);
+            //System.out.println(weather);
+            System.out.println("W mieście " + city + " temperatura wynosi: " + weather.getCurrent().getTemp_c() + " °C");
         } catch (IOException e) {
             e.printStackTrace();
         }
